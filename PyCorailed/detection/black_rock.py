@@ -33,15 +33,11 @@ def draw_contours(image, hsv_image, color=(255, 150, 255)):
         bin_image, 8, cv2.CV_32S)
     _remove_random_from_bin_image(bin_image, nb_components, stats, w, h)
 
-    dilated_bin_image = cv2.dilate(bin_image,
-                                   np.ones((3, 3), np.uint8),
-                                   iterations=2)
+    dilated_bin_image = cv2.dilate(bin_image, np.ones((3, 3), np.uint8), iterations=2)
 
     result = cv2.bitwise_and(image, image, mask=dilated_bin_image)
 
-    contours, hierarchy = cv2.findContours(dilated_bin_image,
-                                           cv2.RETR_EXTERNAL,
-                                           cv2.CHAIN_APPROX_NONE)
+    contours, hierarchy = cv2.findContours(dilated_bin_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     cv2.drawContours(image, contours, -1, color, 3)
 
     return result
@@ -61,9 +57,7 @@ def get_bin(image, hsv_image, color=(255, 150, 255)):
         bin_image, 8, cv2.CV_32S)
     _remove_random_from_bin_image(bin_image, nb_components, stats, w, h)
 
-    dilated_bin_image = cv2.dilate(bin_image,
-                                   np.ones((3, 3), np.uint8),
-                                   iterations=2)
+    dilated_bin_image = cv2.dilate(bin_image, np.ones((3, 3), np.uint8), iterations=2)
 
     result = cv2.bitwise_and(image, image, mask=dilated_bin_image)
 

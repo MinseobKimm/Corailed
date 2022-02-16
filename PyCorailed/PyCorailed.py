@@ -27,8 +27,8 @@ prn = printer.Printer(40)
 agent = simple_agent.SimpleAgent()
 
 # Print information
-print(Fore.WHITE +
-      f"""> Corailed Project with Jeonbuk Science High School!
+print(Fore.WHITE + 
+      """> Corailed Project with Jeonbuk Science High School!
     F1: Quit
     F2: Pause Bot  
     C: Change Mode

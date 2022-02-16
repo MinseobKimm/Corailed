@@ -3,7 +3,7 @@ import time
 from threading import Thread
 from colorama import Fore
 
-import functions
+from PyCorailed import functions
 
 
 class Map:
