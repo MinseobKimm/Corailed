@@ -37,7 +37,18 @@ HSV_MAX_THRESH = np.array([10, 210, 255])
 HSV_MIN_THRESH = np.array([1, 180, 150])
 HSV_MAX_THRESH = np.array([5, 220, 255])
 
+<<<<<<< HEAD
+=======
+#new values for orange dinosaur
+'''
+HSV_MAX_THRESH = np.array([38,255,255])
+HSV_MIN_THRESH = np.array([13, 219, 163])
+'''
+>>>>>>> 49e9d52e90fbb0184f54093839edf9cb9e419f9a
 
+#new values for red hair player
+HSV_MIN_THRESH = np.array([161,0,0])
+HSV_MAX_THRESH = np.array([177,255,255])
 def draw_contours(image, hsv_image, color=(0, 100, 255)):
     """Draws contours of the player found in image"""
     # Remove last value because we don't need the channels
